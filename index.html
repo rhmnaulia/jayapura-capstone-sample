@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Real Estate Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Dashboard Sample</h1>
+      <h2>NYC Property Sale - Jayapura</h2>
+
+      <div class="filter-container">
+        <div class="dropdown">
+          <button class="dropbtn">BOROUGH</button>
+          <div class="dropdown-content" id="boroughFilter"></div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">BUILDING CLASS CATEGORY</button>
+          <div class="dropdown-content" id="buildingClassFilter"></div>
+        </div>
+      </div>
+
+      <div class="stats-container">
+        <div class="stat-item">
+          <h3>Total Penjualan</h3>
+          <p id="totalPenjualan"></p>
+        </div>
+        <div class="stat-item">
+          <h3>Rata-Rata harga Penjualan</h3>
+          <p id="rataRataHargaPenjualan"></p>
+        </div>
+        <div class="stat-item">
+          <h3>Rata-Rata Luas Bangunan</h3>
+          <p id="rataRataLuasBangunan"></p>
+        </div>
+        <div class="stat-item">
+          <h3>Rata-Rata Luas Tanah</h3>
+          <p id="rataRataLuasTanah"></p>
+        </div>
+      </div>
+
+      <div class="charts-container">
+        <div class="chart-container">
+          <h3>Rata-Rata Luas Tanah dan Luas Bangunan</h3>
+          <canvas id="lineAreaChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+          <h3>Luas tanah dan bangunan pada tipe bangunan</h3>
+          <canvas id="horizontalBarChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+          <h3>Distribusi Penjualan per Borough</h3>
+          <canvas id="pieChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+          <h3>Tren Penjualan Bulanan</h3>
+          <canvas id="monthlySalesChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
